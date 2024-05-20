@@ -110,15 +110,16 @@ function updateTimer() {
 
 // Update the analog clock face based on the current time
 function updateClockFace() {
+	w = $("#panel1").width();
     const canvas = document.createElement('canvas');
-    const sq = 200 - 2; // Size of the square canvas
-    const hrHand = 30 * 1.75; // Hour hand length
-    const mnHand = 40 * 1.75; // Minute hand length
-    const scHand = 50 * 1.75; // Second hand length
-    const hrnumpos = sq / 2.45; // Position for hour numbers
-    const numfnt = '16px Arial'; // Font for hour numbers
+    const sq = w - 2; // Size of the square canvas
+    const hrHand = 30 * w/150; // Hour hand length
+    const mnHand = 40 * w/150; // Minute hand length
+    const scHand = 50 * w/150; // Second hand length
+    const hrnumpos = sq / 2.45 ; // Position for hour numbers
+    const numfnt = (14 * w / 175)+ 'px Arial'; // Font for hour numbers
 
-    canvas.width = canvas.height = sq + 16;
+    canvas.width = canvas.height = sq;
     const ctx = canvas.getContext('2d');
     ctx.translate(1, 1);
 

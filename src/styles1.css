@@ -10,24 +10,27 @@ body {
 }
 
 #btnBreak, #btnWork {
-	font-size: 14pt;
+	font-size: 16pt;
 }
 
 #container {
     text-align: center;
+    width:50%;
 }
 
 #panel1 {
-    width: 200px;
-    height: 200px;
-    border: 2px solid gray;
+	box-sizing: border-box;
+    width:50%;
+	height: auto;
+    box-shadow: -2px 0px 1px #b0b0b0, 5px 0px 5px black;
     border-radius: 50%;
     margin: 20px auto;
     position: relative;
 }
 
 #panel2 {
-	padding: 5px;
+	padding: 20px 10px;
+	
 }
 
 .btn {
@@ -38,8 +41,11 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
+    font-size: 16px;
     cursor: pointer;
+	transition: 0.2s;
+	box-shadow: 3px 3px 3px black;
+	margin: 6px;
 }
 
 #lblTime {
